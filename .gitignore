@@ -1,2 +1,4 @@
 /target/
 /.apt_generated/
+/hs_err_pid8288.log
+/replay_pid8288.log
