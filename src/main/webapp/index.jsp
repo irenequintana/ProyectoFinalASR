@@ -14,7 +14,7 @@
 			<li><a href="listar">Listar</a></li>
 			<li>
 				<form action="insertar">
-					Palabra en español: <input type="text" name="palabra">
+					Palabra en ingles: <input type="text" name="palabra">
 					<input type="submit" value="Guardar en Cloudant" />
 				</form>
 			</li>
