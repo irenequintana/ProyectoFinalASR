@@ -6,7 +6,7 @@ applications:
   memory: 256M
   instances: 1
   buildpack: java_buildpack
-  host: asrTomcatEjemploCloudant
-  domain: eu-gb.mybluemix.net
+  host: asrTomcatEjemploCloudant-iqsa
+  domain: mybluemix.net
   services:
   - Cloudant NoSQL DB-2b
