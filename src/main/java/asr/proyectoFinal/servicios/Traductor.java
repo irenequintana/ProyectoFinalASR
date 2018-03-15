@@ -10,7 +10,7 @@ import com.ibm.watson.developer_cloud.language_translator.v2.model.TranslateOpti
 import com.ibm.watson.developer_cloud.language_translator.v2.model.TranslationResult; 
 
 public class Traductor 
-{ /*rrtr*/
+{
 	public static String translate(String palabra) 
 	{ 
 		LanguageTranslator service = new LanguageTranslator(); 
