@@ -32,6 +32,9 @@ public class Controller extends HttpServlet {
 	
 	CloudantPalabraStore store = new CloudantPalabraStore();
 	
+	String savedFile = "";
+	Map<String, String> mapa = new HashMap<String, String>();
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		System.out.println("GET");
@@ -44,20 +47,22 @@ public class Controller extends HttpServlet {
 		// Y en Insertar quiero recoger una palabra en audio en español, transformarlo a texto, traducirlo al francés y reproducirlo en audio 
 		if(request.getServletPath().equals("/listar"))
 		{
-				if(store.getDB() == null)
-					out.println("No ha habido ninguna búsqueda todavía");
-				else
+				if(store.getDB() == null) {
+					//out.println("No ha habido ninguna búsqueda todavía");
+				} else {
+					for(Palabra p : store.getAll()) {
+			        	mapa.put(p.getEspanol(), p.getFrances());
+			        }
 					request.setAttribute("palabras", mapa);
 					request.getRequestDispatcher("listar.jsp").forward(request,response);
 					// Ir a listar.jsp y pasarle el mapa
 					/*out.println("<b>Palabras buscadas:</b><br />" + store.getAll().toString().replaceAll("\\[", "").replaceAll("\\]", "").replaceAll("\\,", "</br>"));*/
+				}
 		}
 		//out.println("</body></html>");
 		
 	}
 	
-	String savedFile = "";
-	Map<String, String> mapa = new HashMap<String, String>();
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -108,9 +113,6 @@ public class Controller extends HttpServlet {
 				//audio_a_reproducir = TextoVoz.textToSpeech(palabra);
 			}
 		}
-        for(Palabra p : store.getAll()) {
-        	mapa.put(p.getEspanol(), p.getFrances());
-        }
         out.println(TextoVoz.textToSpeech(palabraFrances,savePath));
 	}
 	
