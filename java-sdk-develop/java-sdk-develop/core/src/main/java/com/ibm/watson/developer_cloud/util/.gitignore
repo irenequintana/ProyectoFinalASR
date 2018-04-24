@@ -1,0 +1,13 @@
+/BooleanToStringTypeAdapter.java
+/CredentialUtils.java
+/DateDeserializer.java
+/DateSerializer.java
+/GsonSerializationHelper.java
+/GsonSingleton.java
+/HttpLogging.java
+/LongToDateTypeAdapter.java
+/RequestUtils.java
+/ResponseConverterUtils.java
+/ResponseUtils.java
+/Validator.java
+/package-info.java

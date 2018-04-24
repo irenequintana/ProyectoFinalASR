@@ -1,0 +1,3 @@
+/deploy.sh
+/generate_index_html.sh
+/push-javadoc-to-gh-pages.sh

@@ -1,0 +1,12 @@
+/BadRequestException.java
+/ConflictException.java
+/ForbiddenException.java
+/InternalServerErrorException.java
+/NotFoundException.java
+/RequestTooLargeException.java
+/ServiceResponseException.java
+/ServiceUnavailableException.java
+/TooManyRequestsException.java
+/UnauthorizedException.java
+/UnsupportedException.java
+/package-info.java
