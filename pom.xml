@@ -55,6 +55,13 @@
       <version>3.1.0</version>
       <scope>provided</scope>
     </dependency>
+    
+	<dependency>
+	    <groupId>jstl</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+    
 
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
@@ -77,6 +84,18 @@
 		<dependency> 
 			<groupId>com.ibm.watson.developer_cloud</groupId> 
 			<artifactId>language-translator</artifactId> 
+			<version>4.2.1</version> 
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.ibm.watson.developer_cloud</groupId> 
+			<artifactId>speech-to-text</artifactId> 
+			<version>4.2.1</version> 
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.ibm.watson.developer_cloud</groupId> 
+			<artifactId>text-to-speech</artifactId> 
 			<version>4.2.1</version> 
 		</dependency>		
 		

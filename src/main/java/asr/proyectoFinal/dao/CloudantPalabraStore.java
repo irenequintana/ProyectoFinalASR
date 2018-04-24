@@ -99,7 +99,8 @@ public class CloudantPalabraStore
 
 	public Palabra update(String id, Palabra newPalabra) {
 		Palabra visitor = db.find(Palabra.class, id);
-		visitor.setName(newPalabra.getName());
+		visitor.setEspanol(newPalabra.getEspanol());
+		visitor.setFrances(newPalabra.getFrances());
 		db.update(visitor);
 		return db.find(Palabra.class, id);
 		

@@ -15,6 +15,8 @@
  */
 package asr.proyectoFinal.dominio;
 
+import java.util.ArrayList;
+
 /**
  * Represents a Visitor document stored in Cloudant.
  */
@@ -22,10 +24,12 @@ package asr.proyectoFinal.dominio;
 public class Palabra {
 	private String _id;
 	private String _rev;
-	private String name = null;
+	private String espanol = null;
+	private String frances = null;
 
 	public Palabra() {
-		this.name = "";
+		this.espanol = "";
+		this.frances = "";
 	}
 
 	/**
@@ -71,8 +75,12 @@ public class Palabra {
 	 * 
 	 * @return The name of the document.
 	 */
-	public String getName() {
-		return name;
+	public String getEspanol() {
+		return espanol;
+	}
+	
+	public String getFrances() {
+		return frances;
 	}
 
 	/**
@@ -81,14 +89,12 @@ public class Palabra {
 	 * @param name
 	 *            The visitorName to set.
 	 */
-	public void setName(String visitorName) {
-		this.name = visitorName;
+	public void setEspanol(String espanol) {
+		this.espanol = espanol;
 	}
 	
-	@Override
-	public String toString()
-	{
-		return name;
+	public void setFrances(String frances) {
+		this.frances = frances;
 	}
 
 }

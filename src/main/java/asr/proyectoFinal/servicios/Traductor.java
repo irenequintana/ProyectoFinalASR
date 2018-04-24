@@ -1,12 +1,10 @@
 package asr.proyectoFinal.servicios;
 
-import com.google.gson.JsonArray; 
-import com.google.gson.JsonObject; 
-import com.google.gson.JsonParser; 
-import com.ibm.watson.developer_cloud.language_translator.v2.LanguageTranslator; 
-import com.ibm.watson.developer_cloud.language_translator.v2.util.Language; 
-import com.ibm.watson.developer_cloud.language_translator.v2.model.TranslateOptions.Builder; 
-import com.ibm.watson.developer_cloud.language_translator.v2.model.TranslateOptions; 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.ibm.watson.developer_cloud.language_translator.v2.LanguageTranslator;
+import com.ibm.watson.developer_cloud.language_translator.v2.model.TranslateOptions;
 import com.ibm.watson.developer_cloud.language_translator.v2.model.TranslationResult; 
 
 public class Traductor 
@@ -17,7 +15,7 @@ public class Traductor
 		service.setUsernameAndPassword("aedf5f01-b570-4da9-89c7-a4223b6c9bd5", "7IvpuP2EPcEK"); 
 		TranslateOptions translateOptions = new TranslateOptions.Builder() 
 				.addText(palabra) 
-				.modelId("en-fr") 
+				.modelId("es-fr") 
 				.build(); 
 		TranslationResult translationResult = service.translate(translateOptions).execute();
 		System.out.println(translationResult); 
