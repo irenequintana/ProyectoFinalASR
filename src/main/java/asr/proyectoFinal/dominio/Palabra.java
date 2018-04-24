@@ -15,8 +15,6 @@
  */
 package asr.proyectoFinal.dominio;
 
-import java.util.ArrayList;
-
 /**
  * Represents a Visitor document stored in Cloudant.
  */
